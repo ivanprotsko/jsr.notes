@@ -1,0 +1,2 @@
+# jsr.notes
+Training project
