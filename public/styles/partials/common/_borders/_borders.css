@@ -1,0 +1,19 @@
+._border-bottom, ._border-top, ._border-left, ._border-right {
+  border: 0
+}
+  
+._border-bottom {
+  border-bottom: 1px solid #f0f0f0
+}
+  
+._border-top {
+  border-top: 1px solid #f0f0f0
+}
+
+._border-left {
+  border-left: 1px solid #f0f0f0
+}
+  
+._border-right {
+  border-right: 1px solid #f0f0f0
+}

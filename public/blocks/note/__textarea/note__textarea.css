@@ -1,0 +1,25 @@
+.note__textarea {
+  box-sizing: border-box;
+  width: 280px;
+  font-size: 14px;
+  font-family: "Open Sans";
+  outline: 0;
+  border: 0;
+  z-index: 1;
+  border-radius: 3px;;
+  padding: 20px;
+  resize: none;
+  background: none;
+}
+.note__textarea :-ms-input-placeholder {
+  color: black;
+}
+.note__textarea :-moz-placeholder {
+  color: black      height: 180px;
+}
+.note__textarea::-webkit-input-placeholder {
+  color: black;
+}
+.note__textarea::-moz-placeholder {
+  color: black;
+}

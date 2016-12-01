@@ -1,0 +1,13 @@
+.note {
+  cursor: move;
+  position: relative;
+  margin: 20px;
+  width: 280px;
+  height: 180px;
+}
+.note .note__footer, .note .note__ico-close, .note .note__ico-resize {
+  display: block;
+}
+.note:hover .note__footer, .note:hover .note__ico-close, .note:hover .note__ico-resize {
+  display: block;
+}

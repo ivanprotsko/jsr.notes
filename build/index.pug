@@ -1,0 +1,155 @@
+doctype html
+html(lang='ru')
+  head
+
+    // Meta
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    // Favicon
+    link(rel="icon" href="favicon.ico" type="image/x-icon")
+
+    // Styles
+    // Blocks
+
+    // Common
+    link(rel='stylesheet', href='styles/css.css')
+
+    // Logo
+    link(rel='stylesheet', href='blocks/logo/logo.css')
+    link(rel='stylesheet', href='blocks/sidebar/__logo/sidebar__logo.css')
+
+    // Search
+    link(rel='stylesheet', href='blocks/search/search.css')
+
+    // Menu
+    link(rel='stylesheet', href='blocks/menu/menu.css')
+
+    // Space of notes
+    link(rel='stylesheet', href='blocks/space-of-notes/space-of-notes.css')
+
+    // Note
+    link(rel='stylesheet', href='blocks/note/note.css')
+
+    // Note elements
+    link(rel='stylesheet', href='blocks/note/__textarea/note__textarea.css')
+
+    // Note footer elements
+    link(rel='stylesheet', href='blocks/note/__footer/note__footer.css')
+    link(rel='stylesheet', href='blocks/note/__footer/__colors/note__footer__colors.css')
+    link(rel='stylesheet', href='blocks/note/__footer/__colors/__ico-color/note__footer__colors__ico-color.css')
+    link(rel='stylesheet', href='blocks/note/__footer/__colors/__ico-color/_active/note__footer__colors__ico-color_active.css')
+
+    // Other elements
+    link(rel='stylesheet', href='blocks/note/__ico-link/note__ico-link.css')
+    link(rel='stylesheet', href='blocks/note/__ico-save/note__ico-save.css')
+    link(rel='stylesheet', href='blocks/note/__ico-close/note__ico-close.css')
+    link(rel='stylesheet', href='blocks/note/__ico-add/note__ico-add.css')
+    link(rel='stylesheet', href='blocks/note/__ico-resize/note__ico-resize.css')
+
+    // Note modifers
+    link(rel='stylesheet', href='blocks/note/_yellow/note_yellow.css')
+
+    // SideBar
+    link(rel='stylesheet', href='blocks/sidebar/sidebar.css')
+
+    // Sidebar elements
+    // Menu of Categories
+    link(rel='stylesheet', href='blocks/sidebar/__menu-of-categories/sidebar__menu-of-categories.css')
+    // Menu of Sorting
+    link(rel='stylesheet', href='blocks/sidebar/__menu-of-sorting/sidebar__menu-of-sorting.css')
+    // Menu of Exit
+    link(rel='stylesheet', href='blocks/sidebar/__menu-of-exit/sidebar__menu-of-exit.css')
+    link(rel='stylesheet', href='blocks/sidebar/__search/sidebar__search.css')
+
+
+
+  body
+
+    .sideBar
+
+      // Logo
+      .logo.sidebar__logo
+        img(src='img/logo_text.svg')
+        img(src='img/logo_mark.svg')
+
+      // Categories
+      .menu.sidebar__menu-of-categories
+          ul
+            li
+              strong Все заметки
+            li Текст
+            li Графика
+            li Аудио
+            li Видео
+            li Мои категории
+              ul
+                li Новая
+                li Создать заметку
+            li Корзина
+
+      // Search
+      .search.sidebar__search
+        input(type='text' placeholder='Поиск по меткам')
+        button
+          img(src='img/ico_search.svg')
+
+      // Sorting
+      .menu.sidebar__menu-of-sorting
+        ul
+          li
+            strong Мой порядок
+          li По новизне
+          li По размеру
+          li По длительности
+
+      // Exit
+      .menu.sidebar__menu-of-exit
+        ul
+          li Выйти
+
+    // End sidebar
+
+    .space-of-notes
+
+      .note.note_yellow
+
+        textarea.note__textarea(placeholder='Текст заметки' rows='2')
+
+        .note__footer
+          .note__footer__colors
+            img(src='img/ico_color-yellow.svg').note__footer__colors__ico-color.note__footer__colors__ico-color_active
+            img(src='img/ico_color-green.svg').note__footer__colors__ico-color
+            img(src='img/ico_color-red.svg').note__footer__colors__ico-color
+            img(src='img/ico_color-blue.svg').note__footer__colors__ico-color
+            img(src='img/ico_color-purple.svg').note__footer__colors__ico-color
+            img(src='img/ico_color-gray.svg').note__footer__colors__ico-color
+          img(src='img/ico_link.svg').note__ico-link
+          img(src='img/ico_save.svg').note__ico-save
+          img(src='img/ico_add.svg').note__ico-add
+
+        img(src='img/ico_resize.svg').note__ico-resize
+        img(src='img/ico_close.svg').note__ico-close
+
+
+
+    // End space of notes
+
+    // Scripts
+    // Textarea reSize
+    script.
+      var textarea = document.querySelector('textarea');
+
+      textarea.addEventListener('keydown', autosize);
+
+      function autosize() {
+        var el = this;
+        setTimeout(function () {
+          el.style.cssText = 'height:25px';
+          // for box-sizing other than "content-box" use:
+          // el.style.cssText = '-moz-box-sizing:content-box';
+          el.style.cssText = 'height:' + el.scrollHeight + 'px';
+        }, 0);
+      }
+
+    // End scrpits

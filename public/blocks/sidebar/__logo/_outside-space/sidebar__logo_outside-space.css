@@ -1,0 +1,11 @@
+.sidebar__logo {
+  box-sizing: border-box;
+  height: 60px;
+}
+.sidebar__logo img {}
+.sidebar__logo img:first-child {
+  margin-top: 22px;
+}
+.sidebar__logo img:last-child {
+  margin-top: 18px;
+}

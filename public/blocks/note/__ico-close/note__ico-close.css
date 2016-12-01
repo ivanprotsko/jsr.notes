@@ -1,0 +1,9 @@
+.note__ico-close {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  padding: 4px;
+  right: 10px;
+  top: 10px
+}
+  

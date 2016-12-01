@@ -1,0 +1,8 @@
+.note__footer {
+  display: none;
+  width: 100%;
+  height: 29px;
+  position: absolute;
+  bottom: 0;
+  padding-left: 20px
+}

@@ -1,0 +1,31 @@
+.search input[type="text"] {
+  box-sizing: border-box;
+  width: 240px;
+  height: 40px;
+  border: 1px solid #E8E8E8;
+  padding: 0 0 2px 20px;
+  font-family: "Open Sans";
+  font-size: 14px;
+  color: black;
+  outline: none;
+  border-radius: 3px;
+}
+.search input[type="text"] :-ms-input-placeholder {
+  color: black;
+}
+.search input[type="text"] :-moz-placeholder {
+  color: black;
+}
+.search input[type="text"]::-webkit-input-placeholder {
+  color: black;
+}
+.search input[type="text"]::-moz-placeholder {
+  color: black;
+}
+.search button {
+  position: absolute;
+}
+.search img {
+  position: absolute;
+  margin: -26px 0 0 205px;
+}
