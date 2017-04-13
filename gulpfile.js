@@ -12,7 +12,7 @@ var gulp              = require('gulp-group')(require('gulp'));
 var sorting           = require('postcss-sorting');
 var concat            = require('gulp-concat');
 
-gul.task('new', {});
+gul.task('new', {"changes": "new"});
 
 gulp.task('sort', function () {
     return gulp.src('build/style/**/*.sss').pipe(
